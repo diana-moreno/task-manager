@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  min-height: 100%;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  min-height: 100%;
+  padding-bottom: 5rem;
+  background-image: linear-gradient(-225deg, #78acbe 0%, #18BC9C 45%, #3c4a51 100%)
+}
+h2, p, label {
+  color: #797777;
+}
+h1 {
+  color: white;
+}
+h4 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #797777;
+}
+.form-control, label {
+  font-size: 0.8rem !important;
+}
+header {
+  margin-top: 3rem;
+}
+.card {
+  background-color: #fefcfb;
+  max-width: 570px;
+}
+.card-body {
+  padding: 0.7rem;
+}
+.bottom-line {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 1rem;
+}
+.errorEmptyField {
+  border-color: red;
+  color: red;
+}
+.errorEmptyField::placeholder {
+  color: red;
+}
+.w-85 {
+  width: 85%;
+}
+.w-15 {
+  width: 15%;
+  margin-top: 0.2rem;
 }
