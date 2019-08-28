@@ -12,6 +12,7 @@ h2, p, label {
 }
 h1 {
   color: white;
+  letter-spacing: 13px;
 }
 h4 {
   font-weight: bold;
@@ -86,6 +87,7 @@ header {
   border-bottom: 1px solid lightgrey;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
+  letter-spacing: 7px;
 }
 button {
   background-color: white;
