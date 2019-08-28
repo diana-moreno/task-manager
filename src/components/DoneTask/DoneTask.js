@@ -1,5 +1,4 @@
 import React from 'react';
-import './DoneTask.css';
 
 class DoneTask extends React.Component {
   render() {
@@ -11,6 +10,7 @@ class DoneTask extends React.Component {
           <div className='w-75 ml-5'>
             <i
               className="fas fa-check green margin-input-status"
+              title='Revert'
               onClick={() => this.props.restoreTask(this.props.task.id)}>
             </i>
             <h4 className='mt-4 d-inline'>{this.props.task.title}</h4>
@@ -25,7 +25,7 @@ class DoneTask extends React.Component {
             <button
               onClick={() => this.props.deleteTask(this.props.task.id, 'done')}
             >
-              <i className="fas fa-times red"></i>
+              <i className="fas fa-times red" title='Delete'></i>
             </button> {/*función que llama a una función (arrow function) o sino constructor bind*/}
           </div>
         </div>

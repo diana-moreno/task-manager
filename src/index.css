@@ -51,17 +51,38 @@ header {
 .blue {
   color: #00bcd4;
 }
+.purple {
+  color: #9c27b096
+}
+.green {
+  color: #18BC9C;
+}
+.red {
+  color: #ff0000a1;
+}
+.orange {
+  color: #ff9800a3;
+}
 .margin-input-status {
   margin-left: -2rem;
   margin-right: 1rem;
   font-size: 1.2rem;
 }
-
 .fa-check {
   cursor: pointer;
 }
-
 .title {
   border-bottom: 1px solid lightgrey;
   margin-bottom: 2rem;
+}
+button {
+  background-color: white;
+  border: 0;
+}
+.fas {
+  font-size: 1.2rem;
+}
+span {
+  font-style: italic;
+  font-size: 0.8rem;
 }

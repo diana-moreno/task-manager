@@ -1,5 +1,4 @@
 import React from 'react';
-import './TodoTask.css';
 
 class TodoTask extends React.Component {
   render() {
@@ -13,7 +12,7 @@ class TodoTask extends React.Component {
         <div className='w-75 ml-5'>
           <input
             className='margin-input-status'
-            type="checkbox" name="done" value=""
+            type="checkbox" name="done" value="" title='Done'
             onClick={() => this.props.doneTask(this.props.task.id)}
           />
           <h4 className='mt-4 d-inline'>{this.props.task.title}</h4>
@@ -33,7 +32,7 @@ class TodoTask extends React.Component {
           <button
             onClick={() => this.props.deleteTask(this.props.task.id, 'todo')}
           >
-            <i className="fas fa-times red"></i>
+            <i className="fas fa-times red" title='Delete'></i>
           </button> {/*función que llama a una función (arrow function) o sino constructor bind*/}
         </div>
       </div>
