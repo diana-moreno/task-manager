@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import TodoTask from '../../components/TodoTask/TodoTask';
-import TodoDoneList from './TodoDoneList.css';
+import DoneTask from '../../components/DoneTask/DoneTask';
 
 class DoneList extends Component {
-  state = {
-
-  }
+  state = {}
 
   render() {
-    console.log(this.props.tasks)
     return(
       <div className='card mt-4'>
         <div className='card-body m-4'>
           <h2 className='mb-4 word-nowrap text-center title'>DONE</h2>
-          {this.props.tasks.map(task =>
-          <TodoTask task={task} />
-          )}
-
+            {this.props.DoneTasks.map(task =>
+              <DoneTask
+                key={task.id}
+                task={task}
+                deleteTask={this.props.deleteTask}
+                restoreTask={this.props.restoreTask}
+              />
+            )}
         </div>
       </div>
     );

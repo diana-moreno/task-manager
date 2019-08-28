@@ -48,3 +48,20 @@ header {
   width: 15%;
   margin-top: 0.2rem;
 }
+.blue {
+  color: #00bcd4;
+}
+.margin-input-status {
+  margin-left: -2rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.fa-check {
+  cursor: pointer;
+}
+
+.title {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 2rem;
+}

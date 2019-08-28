@@ -6,7 +6,60 @@ import DoneList from './components/TaskList/DoneList';
 
 class App extends Component {
   state = {
-    tasks: []
+    TodoTasks: [],
+    DoneTasks: []
+  }
+
+  sortTasks = tasksList => {
+    let sortedTasks = [
+      ...tasksList.filter(a => a.date && a.time)
+        .sort((a, b) => a.time.localeCompare(b.time))
+        .sort((a, b) => new Date(a.date) - new Date(b.date)),
+      ...tasksList.filter(a => a.date && !a.time)
+        .sort((a, b) => new Date(a.date) - new Date(b.date)),
+      ...tasksList.filter(a => !a.date)
+    ]
+    return sortedTasks
+  }
+
+  addTask = newTask => { //arrow function para que tenga acceso a this
+    let tasks = [...this.state.TodoTasks, newTask]
+    let sortedTasks = this.sortTasks(tasks)
+    this.setState({
+      ...this.state.TodoTasks,
+      TodoTasks: sortedTasks
+    })
+  }
+
+  deleteTask = (id, status) => {
+    if(status === 'todo') {
+      let taskDeleted = [...this.state.TodoTasks].filter(task => task.id !== id)
+      this.setState({
+        ...this.state.DoneTask,
+        TodoTasks: taskDeleted
+      })
+    } else if(status === 'done') {
+      let taskDeleted = [...this.state.DoneTasks].filter(task => task.id !== id)
+      this.setState({
+        ...this.state.TodoTasks,
+        DoneTasks: taskDeleted
+      })
+    }
+  }
+
+  doneTask = (id) => {
+    let doneTask = [...this.state.TodoTasks].filter(task => task.id === id)[0]
+    let DoneTasks = [...this.state.DoneTasks, doneTask]
+    this.deleteTask(id, 'todo')
+    this.setState({
+      ...this.state.TodoTasks,
+      DoneTasks
+    })
+  }
+  restoreTask = (id) => {
+    let taskToRestore = [...this.state.DoneTasks].filter(task => task.id === id)[0]
+    this.addTask(taskToRestore);
+    this.deleteTask(id, 'done');
   }
 
   render() {
@@ -16,14 +69,21 @@ class App extends Component {
       <div className='container-fluid'>
         <Header title='Task manager' />
         <div className='d-flex flex-wrap mt-5'>
-{/*          <div className='col-md-4 mx-auto' style={minWidthStyle}>
-            <NewEvent addTask={this.addTask}/>
-          </div>*/}
-          <div className='col-md-6 mx-auto' style={minWidthStyle}>
-            <TodoList addTask={this.addTask}/>
+          <div className='mx-auto' style={minWidthStyle}>
+            <TodoList
+              TodoTasks={this.state.TodoTasks}
+              addTask={this.addTask}
+              deleteTask={this.deleteTask}
+              doneTask={this.doneTask}
+            />
           </div>
-          <div className='col-md-6 mx-auto' style={minWidthStyle}>
-            <DoneList tasks={this.state.tasks}/>
+          <div className='mx-auto' style={minWidthStyle}>
+            <DoneList
+              DoneTasks={this.state.DoneTasks}
+              addTask={this.addTask}
+              deleteTask={this.deleteTask}
+              restoreTask={this.restoreTask}
+            />
           </div>
         </div>
       </div>

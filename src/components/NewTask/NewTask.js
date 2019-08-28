@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'uuid'
 
 let initialState = {
   task: {
@@ -6,7 +7,8 @@ let initialState = {
     description: '',
     priority: '',
     date: '',
-    time: ''
+    time: '',
+    id: ''
   },
   error: {
     title: false,
@@ -31,7 +33,7 @@ class NewTask extends Component {
 
   validateForm = e => {
     const { title, priority } = this.state.task
-    if(title === '' | priority === '') {
+    if(title === '') {
       this.setState({
         ...this.state,
         error: {
@@ -49,8 +51,8 @@ class NewTask extends Component {
     e.preventDefault() //necesario al hacer un form-submit si no se envían los datos realmente.
     if(this.validateForm()) {
       const newTask = {...this.state.task}
+      newTask.id = uuid(); //crear id único
       console.log(newTask)
-
       this.props.addTask(newTask) // se pasa newTask hacia la funcion de TodoList.
       this.resetForm();
     }
@@ -100,7 +102,7 @@ class NewTask extends Component {
 
               <div className='d-flex flex-column justify-content-around'>
                 <div className='row'>
-                  <label className="col-sm-4 col-md-3 col-form-label text-left text-nowrap">Priority *</label>
+                  <label className="col-sm-4 col-md-3 col-form-label text-left text-nowrap">Priority</label>
                   <div className="col-sm-8 col-md-9">
                     <select
                       className={this.state.error.priority ? 'errorEmptyField form-control' : 'form-control'}
@@ -140,7 +142,7 @@ class NewTask extends Component {
               </div>
             </div>
             <button
-              className='d-inline py-2 mt-3 col-sm-3 col-lg-3 btn btn-success mx-auto'
+              className='d-inline mt-3 col-sm-3 col-lg-3 btn btn-success mx-auto'
               type='submit'
             >Add new</button>
           </form>

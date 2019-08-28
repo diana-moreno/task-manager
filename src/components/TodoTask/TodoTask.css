@@ -4,20 +4,16 @@ button {
 }
 
 .green {
-  color: green;
+  color: #18BC9C;
 }
 .red {
-  color: red;
+  color: #ff0000a1;
 }
 .orange {
-  color: orange;
+  color: #ff9800a3;
 }
 
-.far {
-  margin-left: -2.5rem;
-  margin-right: 1rem;
-  font-size: 1.5rem;
-}
+
 .fas {
   font-size: 1.2rem;
 }
