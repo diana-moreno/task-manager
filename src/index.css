@@ -4,7 +4,8 @@ html {
 body {
   min-height: 100%;
   padding-bottom: 5rem;
-  background-image: linear-gradient(-225deg, #78acbe 0%, #18BC9C 45%, #3c4a51 100%)
+  background-image: linear-gradient(-225deg, #78acbe 0%, #18BC9C 45%, #3c4a51 100%);
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 h2, p, label {
   color: #797777;
@@ -14,11 +15,11 @@ h1 {
 }
 h4 {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #797777;
 }
-.form-control, label {
-  font-size: 0.8rem !important;
+.form-control, label, button {
+  font-size: 1rem !important;
 }
 header {
   margin-top: 3rem;
@@ -29,6 +30,7 @@ header {
 }
 .card-body {
   padding: 0.7rem;
+  min-height: 140.38px;
 }
 .bottom-line {
   border-bottom: 1px solid #e1e1e1;
@@ -68,21 +70,38 @@ header {
   margin-right: 1rem;
   font-size: 1.2rem;
 }
-.fa-check {
+.fa-check,
+.fa-plus,
+.fa-times {
   cursor: pointer;
+}
+.fa-plus {
+  margin-left: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+.new-task-add-message {
+  margin-left: 1rem;
 }
 .title {
   border-bottom: 1px solid lightgrey;
   margin-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 button {
   background-color: white;
   border: 0;
 }
 .fas {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+.fa-times {
+  font-size: 1.5rem;
 }
 span {
   font-style: italic;
-  font-size: 0.8rem;
+  font-size: 1rem;
+}
+.fa-square {
+  color: #797777;
+  cursor: pointer;
 }

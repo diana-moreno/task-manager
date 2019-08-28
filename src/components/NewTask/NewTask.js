@@ -12,7 +12,6 @@ let initialState = {
   },
   error: {
     title: false,
-    priority: false
   }
 }
 
@@ -32,18 +31,17 @@ class NewTask extends Component {
   }
 
   validateForm = e => {
-    const { title, priority } = this.state.task
+    const { title } = this.state.task
     if(title === '') {
       this.setState({
         ...this.state,
         error: {
-          ...this.state.error,
           title: title === '' ? true : false,
-          priority: priority === '' ? true : false,
         }
       })
       return
     }
+    this.props.toggleClick();
     return true;
   }
 
@@ -66,7 +64,7 @@ class NewTask extends Component {
 
   render() {
     return(
-      <div className='card text-center mt-4'>
+      <div className='card text-center mb-4'>
         <div className='card-body'>
           <form
             onSubmit={this.createTask}
@@ -105,7 +103,7 @@ class NewTask extends Component {
                   <label className="col-sm-4 col-md-3 col-form-label text-left text-nowrap">Priority</label>
                   <div className="col-sm-8 col-md-9">
                     <select
-                      className={this.state.error.priority ? 'errorEmptyField form-control' : 'form-control'}
+                      className='form-control'
                       value={this.state.task.priority}
                       onChange={this.setStateWithForm('priority')}
                     >

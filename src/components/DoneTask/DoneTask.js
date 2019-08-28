@@ -1,6 +1,15 @@
 import React from 'react';
 
 class DoneTask extends React.Component {
+  state = { icon: "fas fa-check green margin-input-status"}
+  changeIcon = () => {
+    this.setState({
+      icon: this.state.icon === "fas fa-check green margin-input-status"
+                              ? "fas fa-undo-alt purple margin-input-status"
+                              : "fas fa-check green margin-input-status"
+    })
+  }
+
   render() {
     let dueDateMessage = Object.keys(this.props.task.date).length > 0 ? 'Due date: ' : null
 
@@ -8,8 +17,11 @@ class DoneTask extends React.Component {
       <div>
         <div className='d-flex text-left align-items-top mb-4'>
           <div className='w-75 ml-5'>
+
             <i
-              className="fas fa-check green margin-input-status"
+              onMouseOver={()=> this.changeIcon()}
+              onMouseOut={()=> this.changeIcon()}
+              className= {this.state.icon}
               title='Revert'
               onClick={() => this.props.restoreTask(this.props.task.id)}>
             </i>

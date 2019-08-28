@@ -10,11 +10,11 @@ class TodoTask extends React.Component {
     <div>
       <div className='d-flex text-left align-items-top mb-4'>
         <div className='w-75 ml-5'>
-          <input
-            className='margin-input-status'
-            type="checkbox" name="done" value="" title='Done'
+          <i
+            className="far fa-square margin-input-status"
+            title='Done'
             onClick={() => this.props.doneTask(this.props.task.id)}
-          />
+          ></i>
           <h4 className='mt-4 d-inline'>{this.props.task.title}</h4>
           <p className='mb-0'><span>{this.props.task.description}</span></p>
           <p className='mb-0'>
