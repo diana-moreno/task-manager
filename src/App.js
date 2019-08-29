@@ -14,12 +14,11 @@ class App extends Component {
   componentDidMount() {
     const todotasks = localStorage.getItem('TodoTasks')
     const donetasks = localStorage.getItem('DoneTasks')
-    if(todotasks || donetasks) {
-      this.setState({
-        TodoTasks: JSON.parse(todotasks), // lo convierte en un array de objetos
-        DoneTasks: JSON.parse(donetasks)
-      })
-    }
+
+    this.setState({
+      TodoTasks: todotasks ? JSON.parse(todotasks) : [], // lo convierte en un array de objetos
+      DoneTasks: donetasks ? JSON.parse(donetasks) : []
+    })
   }
   // almacenar los datos cuando se añaden o eliminan eventos
   componentDidUpdate() {
