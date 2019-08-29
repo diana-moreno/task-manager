@@ -98,7 +98,8 @@ span {
 }
 .fa-check,
 .fa-plus,
-.fa-times {
+.fa-times,
+.fa-undo-alt {
   cursor: pointer;
 }
 .fas {
