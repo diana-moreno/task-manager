@@ -79,13 +79,11 @@ class App extends Component {
   }
 
   render() {
-    const minWidthStyle = {minWidth: '600px'}
-
     return (
       <div className='container-fluid'>
         <Header title='Task manager' />
         <div className='d-flex flex-wrap mt-5'>
-          <div className='mx-auto w-40' style={minWidthStyle}>
+          <div className='mx-auto w-40 card-size'>
             <TodoList
               TodoTasks={this.state.TodoTasks}
               addTask={this.addTask}
@@ -93,7 +91,7 @@ class App extends Component {
               doneTask={this.doneTask}
             />
           </div>
-          <div className='mx-auto w-40' style={minWidthStyle}>
+          <div className='mx-auto w-40 card-size'>
             <DoneList
               DoneTasks={this.state.DoneTasks}
               addTask={this.addTask}

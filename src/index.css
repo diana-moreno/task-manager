@@ -1,5 +1,6 @@
 html {
   min-height: 100%;
+  font-size: calc(13px + 6 * ((100vw - 480px) / 801));
 }
 body {
   min-height: 100%;
@@ -47,6 +48,9 @@ span {
 .card-body {
   padding: 0.7rem;
   min-height: 158.38px;
+}
+.card-size {
+  min-width: 290px;
 }
 .bottom-line {
   border-bottom: 1px solid #e1e1e1;
@@ -118,4 +122,35 @@ span {
 }
 .new-task-add-message {
   margin-left: 1rem;
+}
+
+
+
+
+/* smartphones, Android phones, landscape iPhone */
+@media screen and (min-device-width:480px) {
+
+}
+
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media screen and (min-width:600px) {}
+
+@media screen and (min-width:640px) {
+}
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media screen and (min-width:801px) {}
+
+/* big landscape tablets, laptops, and desktops */
+@media screen and (min-width:1025px) {
+  .card-size {
+    min-width: 600px;
+  }
+}
+
+/* hi-res laptops and desktops */
+@media screen and (min-width:1281px) {
+  html {
+    font-size: 16px;
+  }
+
 }
