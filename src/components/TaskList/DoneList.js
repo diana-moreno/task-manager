@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DoneTask from '../../components/DoneTask/DoneTask';
+import PropTypes from 'prop-types';
 
 class DoneList extends Component {
   state = {}
@@ -21,6 +22,12 @@ class DoneList extends Component {
       </div>
     );
   }
+}
+
+DoneList.propTypes = {
+  DoneTasks : PropTypes.array.isRequired,
+  deleteTask : PropTypes.func.isRequired,
+  restoreTask : PropTypes.func.isRequired
 }
 
 export default DoneList;

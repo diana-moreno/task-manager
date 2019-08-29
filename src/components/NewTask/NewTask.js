@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import uuid from 'uuid'
+import uuid from 'uuid';
+import PropTypes from 'prop-types';
 
 let initialState = {
   task: {
@@ -50,7 +51,7 @@ class NewTask extends Component {
     if(this.validateForm()) {
       const newTask = {...this.state.task}
       newTask.id = uuid(); //crear id único
-      console.log(newTask)
+      //console.log(newTask)
       this.props.addTask(newTask) // se pasa newTask hacia la funcion de TodoList.
       this.resetForm();
     }
@@ -149,5 +150,11 @@ class NewTask extends Component {
     );
   }
 }
+
+NewTask.propTypes = {
+  toggleClick : PropTypes.func.isRequired,
+  addTask : PropTypes.func.isRequired
+}
+
 
 export default NewTask;

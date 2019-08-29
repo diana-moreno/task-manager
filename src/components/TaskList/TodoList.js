@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TodoTask from '../../components/TodoTask/TodoTask';
 import NewTask from '../../components/NewTask/NewTask';
-
+import PropTypes from 'prop-types';
 
 class TodoList extends Component {
   state = { visibleNewTask: false }
@@ -42,6 +42,12 @@ class TodoList extends Component {
       </div>
     );
   }
+}
+
+TodoList.propTypes = {
+  deleteTask : PropTypes.func.isRequired,
+  doneTask : PropTypes.func.isRequired,
+  addTask : PropTypes.func.isRequired
 }
 
 export default TodoList;

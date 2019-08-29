@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class DoneTask extends React.Component {
   state = { icon: "fas fa-check green margin-input-status"}
@@ -44,6 +45,12 @@ class DoneTask extends React.Component {
       </div>
     );
   }
+}
+
+DoneTask.propTypes = {
+  deleteTask : PropTypes.func.isRequired,
+  restoreTask : PropTypes.func.isRequired,
+  task : PropTypes.object.isRequired
 }
 
 export default DoneTask;
