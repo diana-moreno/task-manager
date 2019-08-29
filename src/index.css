@@ -42,6 +42,7 @@ span {
 .card {
   background-color: #fefcfb;
   max-width: 570px;
+  margin-bottom: 2rem;
 }
 .card-body {
   padding: 0.7rem;
