@@ -47,7 +47,8 @@ class TodoList extends Component {
 TodoList.propTypes = {
   deleteTask : PropTypes.func.isRequired,
   doneTask : PropTypes.func.isRequired,
-  addTask : PropTypes.func.isRequired
+  addTask : PropTypes.func.isRequired,
+  TodoTasks: PropTypes.object.isRequired
 }
 
 export default TodoList;
