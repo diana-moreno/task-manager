@@ -15,7 +15,7 @@ class DoneTask extends React.Component {
 
     return (
       <div>
-        <div className='d-flex text-left align-items-top mb-4'>
+        <div className='d-flex text-left align-items-top mb-2'>
           <div className='w-75 ml-5'>
 
             <i

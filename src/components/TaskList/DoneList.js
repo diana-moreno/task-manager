@@ -6,7 +6,7 @@ class DoneList extends Component {
 
   render() {
     return(
-      <div className='card mt-4'>
+      <div className='card'>
         <div className='card-body m-4'>
           <h2 className='mb-4 word-nowrap text-center title'>DONE</h2>
             {this.props.DoneTasks.map(task =>

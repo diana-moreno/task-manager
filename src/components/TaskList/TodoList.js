@@ -14,16 +14,16 @@ class TodoList extends Component {
   render() {
 
     return(
-      <div className='card mt-4'>
+      <div className='card'>
         <div className='card-body m-4'>
           <h2 className='mb-4 word-nowrap text-center title'>TO DO</h2>
-          <div>
+
             <i className="fas fa-plus orange"
                onClick={() => this.toggleClick()}
             >
               <h4 className='d-inline new-task-add-message orange'>Add new task</h4>
             </i>
-          </div>
+
           {this.state.visibleNewTask &&
           <NewTask
             addTask={this.props.addTask}
