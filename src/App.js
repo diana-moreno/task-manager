@@ -10,7 +10,7 @@ class App extends Component {
     DoneTasks: []
   }
 
-  // cargar los datos almacenados al cargar la página
+/*  // cargar los datos almacenados al cargar la página
   componentDidMount() {
     const todotasks = localStorage.getItem('TodoTasks')
     const donetasks = localStorage.getItem('DoneTasks')
@@ -24,7 +24,7 @@ class App extends Component {
   componentDidUpdate() {
     localStorage.setItem('TodoTasks', JSON.stringify(this.state.TodoTasks))
     localStorage.setItem('DoneTasks', JSON.stringify(this.state.DoneTasks))
-  }
+  }*/
 
   sortTasks = tasksList => {
     let sortedTasks = [
