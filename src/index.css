@@ -41,7 +41,7 @@ span {
 }
 .card {
   background-color: #fefcfb;
-  max-width: 570px;
+  sssmax-width: 570px;
   margin-bottom: 2rem;
 }
 .card-body {
@@ -65,6 +65,12 @@ span {
 .w-15 {
   width: 15%;
   margin-top: 0.2rem;
+}
+.w-40 {
+  width: 40%;
+}
+.w-fit {
+  width: fit-content;
 }
 .blue {
   color: #00bcd4;

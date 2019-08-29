@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   // cargar los datos almacenados al cargar la página
-/*  componentDidMount() {
+  componentDidMount() {
     const todotasks = localStorage.getItem('TodoTasks')
     const donetasks = localStorage.getItem('DoneTasks')
 
@@ -19,7 +19,7 @@ class App extends Component {
       TodoTasks: todotasks ? JSON.parse(todotasks) : [], // lo convierte en un array de objetos
       DoneTasks: donetasks ? JSON.parse(donetasks) : []
     })
-  }*/
+  }
   // almacenar los datos cuando se añaden o eliminan eventos
   componentDidUpdate() {
     localStorage.setItem('TodoTasks', JSON.stringify(this.state.TodoTasks))
@@ -85,7 +85,7 @@ class App extends Component {
       <div className='container-fluid'>
         <Header title='Task manager' />
         <div className='d-flex flex-wrap mt-5'>
-          <div className='mx-auto' style={minWidthStyle}>
+          <div className='mx-auto w-40' style={minWidthStyle}>
             <TodoList
               TodoTasks={this.state.TodoTasks}
               addTask={this.addTask}
@@ -93,7 +93,7 @@ class App extends Component {
               doneTask={this.doneTask}
             />
           </div>
-          <div className='mx-auto' style={minWidthStyle}>
+          <div className='mx-auto w-40' style={minWidthStyle}>
             <DoneList
               DoneTasks={this.state.DoneTasks}
               addTask={this.addTask}
