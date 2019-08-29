@@ -16,7 +16,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": ".",
+  "homepage": "https:diana-moreno.github.io/todo-react",
   "eslintConfig": {
     "extends": "react-app"
   },
