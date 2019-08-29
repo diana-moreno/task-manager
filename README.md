@@ -12,6 +12,7 @@ This schedule manager is my first project made with Bootstrap classes and React.
 - In the form, only the title is required, if it isn't filled, a message in red will appear.
 - When the form is validated, a to-do task is added at the left side.
 - The tasks are shown sorted by date and time.
+- The due date will appear blue if it's still in time, and red if the time is over. When the task is done, it won't have any color.
 - When a task is finished, you can mark it as done, and the task will move to the done side.
 - If a to-do task is checked as done by error, it's possible to revert the movement.
 - Otherside, every task can be deleted at every time.
