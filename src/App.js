@@ -12,6 +12,9 @@ class App extends Component {
 
   // cargar los datos almacenados al cargar la página
   componentDidMount() {
+    localStorage.setItem('TodoTasks', [])
+    localStorage.setItem('TodoTasks', [])
+
     const todotasks = localStorage.getItem('TodoTasks')
     const donetasks = localStorage.getItem('DoneTasks')
 
