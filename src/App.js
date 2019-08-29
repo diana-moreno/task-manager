@@ -11,10 +11,7 @@ class App extends Component {
   }
 
   // cargar los datos almacenados al cargar la página
-  componentDidMount() {
-    localStorage.setItem('TodoTasks', [])
-    localStorage.setItem('DoneTasks', [])
-
+/*  componentDidMount() {
     const todotasks = localStorage.getItem('TodoTasks')
     const donetasks = localStorage.getItem('DoneTasks')
 
@@ -22,7 +19,7 @@ class App extends Component {
       TodoTasks: todotasks ? JSON.parse(todotasks) : [], // lo convierte en un array de objetos
       DoneTasks: donetasks ? JSON.parse(donetasks) : []
     })
-  }
+  }*/
   // almacenar los datos cuando se añaden o eliminan eventos
   componentDidUpdate() {
     localStorage.setItem('TodoTasks', JSON.stringify(this.state.TodoTasks))
