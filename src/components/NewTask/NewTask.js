@@ -65,13 +65,13 @@ class NewTask extends Component {
 
   render() {
     return(
-      <div className='card w-fit mx-auto text-center mb-4'>
+      <div className='card mx-auto text-center mb-4'>
         <div className='card-body'>
           <form
             onSubmit={this.createTask}
           >
-            <div className='d-flex w-fit'>
-              <div className='d-flex flex-column justify-content-center'>
+            <div className='d-flex justify-content-evenly'>
+              <div className='d-flex flex-column '>
                 <div className='text-left'>
                   <label className="col-sm-4 col-md-3 col-form-label text-nowrap">Title *</label>
                   <div className="col-sm-11">

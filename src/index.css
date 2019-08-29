@@ -123,19 +123,30 @@ span {
 .new-task-add-message {
   margin-left: 1rem;
 }
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
 
 
 
 
 /* smartphones, Android phones, landscape iPhone */
 @media screen and (min-device-width:480px) {
-
+  .card-size {
+    min-width: 450px;
+  }
 }
 
 /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-@media screen and (min-width:600px) {}
-
+@media screen and (min-width:600px) {
+  .card-size {
+    min-width: 560px;
+  }
+}
 @media screen and (min-width:640px) {
+  .card-size {
+    min-width: 580px;
+  }
 }
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media screen and (min-width:801px) {}

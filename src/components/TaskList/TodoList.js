@@ -23,7 +23,7 @@ class TodoList extends Component {
               className="fas fa-plus orange"
               onClick={() => this.toggleClick()}
             >
-              <h4 className='d-inline new-task-add-message orange'>Add new task</h4>
+              <h4 className='d-inline new-task-add-message orange font-italic'>Add new task</h4>
             </i>
 
           {this.state.visibleNewTask &&
