@@ -48,7 +48,7 @@ TodoList.propTypes = {
   deleteTask : PropTypes.func.isRequired,
   doneTask : PropTypes.func.isRequired,
   addTask : PropTypes.func.isRequired,
-  TodoTasks: PropTypes.object.isRequired
+  TodoTasks: PropTypes.array.isRequired
 }
 
 export default TodoList;
