@@ -140,7 +140,7 @@ class NewTask extends Component {
               </div>
             </div>
             <button
-              className='d-inline mt-3 col-sm-3 col-lg-3 btn btn-success mx-auto'
+              className='d-inline mt-3 col-sm-3 col-lg-3 btn btn-success orange-background mx-auto'
               type='submit'
             >Add new</button>
           </form>

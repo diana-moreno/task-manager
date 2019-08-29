@@ -5,7 +5,7 @@ class DoneTask extends React.Component {
   changeIcon = () => {
     this.setState({
       icon: this.state.icon === "fas fa-check green margin-input-status"
-                              ? "fas fa-undo-alt purple margin-input-status"
+                              ? "fas fa-undo-alt orange margin-input-status"
                               : "fas fa-check green margin-input-status"
     })
   }

@@ -10,6 +10,22 @@ class App extends Component {
     DoneTasks: []
   }
 
+  // cargar los datos almacenados al cargar la página
+  componentDidMount() {
+    const todotasks = localStorage.getItem('TodoTasks')
+    const donetasks = localStorage.getItem('DoneTasks')
+
+    this.setState({
+      TodoTasks: JSON.parse(todotasks), // lo convierte en un array de objetos
+      DoneTasks: JSON.parse(donetasks)
+    })
+  }
+  // almacenar los datos cuando se añaden o eliminan eventos
+  componentDidUpdate() {
+    localStorage.setItem('TodoTasks', JSON.stringify(this.state.TodoTasks))
+    localStorage.setItem('DoneTasks', JSON.stringify(this.state.DoneTasks))
+  }
+
   sortTasks = tasksList => {
     let sortedTasks = [
       ...tasksList.filter(a => a.date && a.time)

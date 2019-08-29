@@ -18,10 +18,10 @@ class TodoList extends Component {
         <div className='card-body m-4'>
           <h2 className='mb-4 word-nowrap text-center title'>TO DO</h2>
           <div>
-            <i className="fas fa-plus green"
+            <i className="fas fa-plus orange"
                onClick={() => this.toggleClick()}
             >
-              <h4 className='d-inline new-task-add-message green'>Add new task</h4>
+              <h4 className='d-inline new-task-add-message orange'>Add new task</h4>
             </i>
           </div>
           {this.state.visibleNewTask &&
