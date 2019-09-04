@@ -27,8 +27,8 @@ class DoneTask extends React.Component {
               onClick={() => this.props.restoreTask(this.props.task.id)}>
             </i>
             <h4 className='mt-4 d-inline'>{this.props.task.title}</h4>
-            <p className='mb-0'><span>{this.props.task.description}</span></p>
-            <p className='mb-0'>
+            <p className='mb-0 ml-4'><span>{this.props.task.description}</span></p>
+            <p className='mb-0 ml-4'>
               <span>
               {dueDateMessage} {this.props.task.date} {this.props.task.time}
               </span>

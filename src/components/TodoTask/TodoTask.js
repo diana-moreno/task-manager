@@ -3,10 +3,23 @@ import PropTypes from 'prop-types';
 
 class TodoTask extends React.Component {
 
+  choosePriorityColor = () => {
+    let colorPriority = '';
+      if(this.props.task.priority === 'low') {
+        colorPriority = 'green';
+      } else if(this.props.task.priority === 'medium') {
+        colorPriority = 'orange';
+      } else {
+        colorPriority = 'red';
+      }
+      return colorPriority;
+    }
+
   render() {
     let dueDateMessage = Object.keys(this.props.task.date).length > 0 ? 'Due date: ' : null;
     let colorDate = new Date(this.props.task.date) >= new Date()  ? ' blue mb-0' : 'red mb-0';
     let priorityMessage = Object.keys(this.props.task.priority).length > 0 ? 'Priority: ' : null;
+
 
     return (
       <div>
@@ -18,14 +31,14 @@ class TodoTask extends React.Component {
               onClick={() => this.props.doneTask(this.props.task.id)}
             ></i>
             <h4 className='mt-4 d-inline'>{this.props.task.title}</h4>
-            <p className='mb-0'><span>{this.props.task.description}</span></p>
-            <p className='mb-0'>
-              <span>
+            <p className='mb-0 ml-4'><span>{this.props.task.description}</span></p>
+            <p className='mb-0 ml-4'>
+              <span className={this.choosePriorityColor()}>
                 {priorityMessage} {this.props.task.priority}
               </span>
             </p>
-            <p className={colorDate}>
-              <span>
+            <p className='ml-4'>
+              <span className={colorDate}>
                 {dueDateMessage} {this.props.task.date} {this.props.task.time}
               </span>
             </p>

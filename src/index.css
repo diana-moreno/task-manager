@@ -17,8 +17,11 @@ h1 {
 }
 h4 {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #797777;
+}
+h4.new-task-add-message {
+  font-size: 1.3rem;
 }
 header {
   margin-top: 3rem;
@@ -97,7 +100,7 @@ span {
 }
 .margin-input-status {
   margin-left: -2rem;
-  margin-right: 0.7rem;
+  margin-right: 0.9rem;
   font-size: 1.2rem;
 }
 .fa-check,
