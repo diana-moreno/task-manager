@@ -37,7 +37,7 @@ class TodoTask extends React.Component {
                 {priorityMessage} {this.props.task.priority}
               </span>
             </p>
-            <p className='ml-4'>
+            <p className='mb-0 ml-4'>
               <span className={colorDate}>
                 {dueDateMessage} {this.props.task.date} {this.props.task.time}
               </span>

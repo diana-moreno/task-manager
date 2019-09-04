@@ -65,8 +65,8 @@ class NewTask extends Component {
 
   render() {
     return(
-      <div className='card mx-auto text-center mb-4'>
-        <div className='card-body'>
+      <div className='card mx-auto text-center mb-4 new-task-card'>
+        <div className='card-body new-task-card'>
           <form
             onSubmit={this.createTask}
           >
@@ -141,7 +141,7 @@ class NewTask extends Component {
               </div>
             </div>
             <button
-              className='d-inline mt-3 col-sm-3 col-lg-3 btn btn-success orange-background mx-auto'
+              className='d-inline mt-3 col-sm-3 col-lg-3 btn btn-success add-new-button mx-auto'
               type='submit'
             >Add new</button>
           </form>
