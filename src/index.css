@@ -106,12 +106,17 @@ section {
   color: #ff9800a3;
 }
 .grey {
-  color: #b7a4a3;
+  color: #797777
 }
 .add-new-button {
   background-color: #b3b2b0;
   border-color: #b3b2b0;
   border-radius: 0;
+}
+.add-new-task-container {
+  display: flex;
+  justify-content: flex-end;
+  color: #797777;
 }
 .margin-input-status {
   margin-left: -2rem;

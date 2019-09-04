@@ -17,7 +17,7 @@ class TodoList extends Component {
       <div className='card'>
         <div className='card-body m-4'>
           <h2 className='mb-4 word-nowrap text-center title'>TO DO</h2>
-          <div>
+          <div className='add-new-task-container'>
             <i
               title='new'
               className="fas fa-plus grey"
