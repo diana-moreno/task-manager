@@ -15,8 +15,9 @@ class TodoList extends Component {
 
     return(
       <div className='card'>
-        <h2 className='mb-4 word-nowrap text-center title'>TO DO</h2>
-        <div className='card-body ml-4 mr-4 mb-4'>
+        <div className='card-body m-4'>
+          <h2 className='mb-4 word-nowrap text-center title'>TO DO</h2>
+          <div>
             <i
               title='new'
               className="fas fa-plus grey"
@@ -24,7 +25,7 @@ class TodoList extends Component {
             >
               <h4 className='d-inline new-task-add-message grey font-italic'>Add new task</h4>
             </i>
-
+            </div>
           {this.state.visibleNewTask &&
           <NewTask
             addTask={this.props.addTask}

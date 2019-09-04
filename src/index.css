@@ -3,8 +3,6 @@ html {
   font-size: calc(13px + 6 * ((100vw - 480px) / 801));
 }
 body {
-  min-height: 100%;
-  padding-bottom: 5rem;
   background-image: linear-gradient(-225deg, #78acbe 0%, #18BC9C 45%, #3c4a51 100%);
   font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -37,26 +35,29 @@ span {
   font-style: italic;
   font-size: 1rem;
 }
+section {
+  margin-top: 3.8rem;
+}
 .title {
-  sssborder-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
   padding-bottom: 1rem;
   letter-spacing: 7px;
   margin-bottom: 0 !important;
   margin-top: 1rem;
-  color: white;
+  color: #797777;
 }
 .card {
-  background-color: #b7a4a3;
+  background-color: #fafafa;
   sssmax-width: 570px;
   margin-bottom: 2rem;
-  outline: 1px solid #607D8B;
-  border-radius: 0;
+  sssoutline: 1px solid #607D8B;
+  sssborder-radius: 0;
 }
 .card-body {
   padding: 0.7rem;
   min-height: 158.38px;
   background-color: #fafafa;
-  border: 0.6rem solid #689d98;
+  sssborder: 0.6rem solid #689d98;
 }
 .new-task-card {
   border: 0;
@@ -125,12 +126,14 @@ span {
 }
 .fas {
   font-size: 1.3rem;
+  ssspadding-top: 1rem;
 }
 .fa-times {
   font-size: 1.5rem;
 }
 .fa-plus {
   margin: 0.7rem 0 1.5rem 0.9rem;
+  border-bottom: 1px solid;
 }
 .fa-square {
   color: #797777;
