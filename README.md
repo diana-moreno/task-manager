@@ -39,7 +39,7 @@ This schedule manager is my first project made with Bootstrap classes and React.
 
 ### **Usage**
 
-To run the game in local, I have included Serve, a local server from an NPM library.
+To run the game in local:
 
 - Install Node.js at the terminal if you haven't yet (https://nodejs.org/es/). Commands for Ubuntu:
 
@@ -55,7 +55,7 @@ sudo apt-get install npm
 - Clone or download the repository in your computer.
 
 ```bash
-git clone https://github.com/diana-moreno/schedule-react.git`
+git clone https://github.com/diana-moreno/todo-react.git`
 ```
 - Download the npm competitions in your own repository and start it.
 
