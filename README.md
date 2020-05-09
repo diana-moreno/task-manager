@@ -56,7 +56,7 @@ sudo apt-get install npm
 - Clone or download the repository in your computer.
 
 ```bash
-git clone https://github.com/diana-moreno/todo-react.git`
+git clone https://github.com/diana-moreno/task-manager.git`
 ```
 
 - Download the npm competitions in your own repository and start it.
