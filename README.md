@@ -1,4 +1,4 @@
-## TO-DO REACT
+## TASK MANAGER
 
 <p align="center">
   <img src="./img/todo-react.png" width="500">
@@ -36,7 +36,6 @@ This schedule manager is my first project made with Bootstrap classes and React.
 - Bootstrap styles with (Bootswatch)[https://bootswatch.com/]
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), from Facebook.
 
-
 ### **Usage**
 
 To run the game in local:
@@ -47,16 +46,19 @@ To run the game in local:
 sudo apt-get update
 sudo apt-get install nodejs
 ```
+
 - You will need to install the package manager npm:
 
 ```bash
 sudo apt-get install npm
 ```
+
 - Clone or download the repository in your computer.
 
 ```bash
 git clone https://github.com/diana-moreno/todo-react.git`
 ```
+
 - Download the npm competitions in your own repository and start it.
 
 ```bash
@@ -64,9 +66,7 @@ npm install
 npm start
 ```
 
-- Otherside, you can run the final project here: https://diana-moreno.github.io/todo-react/
-
-
+- Otherside, you can run the final project here: https://diana-moreno.github.io/task-manager/
 
 ### Available Scripts
 
@@ -104,8 +104,6 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-
 
 ### More
 
